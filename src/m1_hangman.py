@@ -1,7 +1,7 @@
 """
 Hangman.
 
-Authors: Yifei Xiao and Jared .
+Authors: Yifei Xiao and Jared Brutcher.
 """  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 # DONE: 2. Implement Hangman using your Iterative Enhancement Plan.
@@ -19,13 +19,13 @@ def run_the_game():
     words = construct_the_string()
     answer = get_word(words)
     M = choice_to_make()
-    print(answer)
+
     progress = ''
     for k in range(len(answer)):
         progress += '-'
 
     run_game_loop(M,progress,answer)
-
+    redo()
 
 
 
@@ -94,6 +94,15 @@ def award(M):
         print('LOSE!')
     else:
         print('You WIN!!!')
+
+def redo():
+    string = input('Play it again? (y/n): ')
+    if string=='n':
+        print('Thanks for Playing Hanging man')
+    elif string=='y':
+        run_the_game()
+
+
 
 
 # Test Functions
