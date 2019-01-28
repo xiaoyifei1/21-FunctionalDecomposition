@@ -83,12 +83,10 @@ def run_game_loop(M, progress, answer):
 def add_letter(progress, letter,answer):
     returned_progress = ''
     for k in range(len(answer)):
-        if answer[k]==letter:
-            for j in range(len(answer)):
-                if j == k:
-                    returned_progress += answer[k]
-                else:
-                    returned_progress += progress[j]
+        if answer[k] == letter:
+            returned_progress += answer[k]
+        else:
+            returned_progress += progress[k]
     return returned_progress
 
 def award(M):
