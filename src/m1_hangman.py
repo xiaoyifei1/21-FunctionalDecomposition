@@ -19,6 +19,7 @@ def run_the_game():
     words = construct_the_string()
     answer = get_word(words)
     M = choice_to_make()
+    
 
     progress = ''
     for k in range(len(answer)):
